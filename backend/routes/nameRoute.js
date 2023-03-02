@@ -6,7 +6,6 @@ const {
   deleteName,
   updateName,
 } = require("../controllers/nameController");
-const Names = require("../models/nameModel");
 const router = express.Router();
 
 //Otra forma de declarar las rutas con el mismo path

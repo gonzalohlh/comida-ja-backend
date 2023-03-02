@@ -16,9 +16,10 @@ const app = express();
 }; */
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(
+/* app.use(
   cors({ origin: ["http://localhost:3000/", "https://comida-ja.onrender.com"] })
-);
+); */
+app.use(cors("*"));
 app.use("/api/names", nameRoutes);
 
 /* //Para ver si funciona en el navegador:
