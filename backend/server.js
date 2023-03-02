@@ -1,9 +1,9 @@
 const dotenv = require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 /* const connectDB = require("./config/connectDB"); para el otro metodo */
 const nameRoutes = require("./routes/nameRoute");
-const cors = require("cors");
 
 const app = express();
 
@@ -15,11 +15,11 @@ const app = express();
     next();
 }; */
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 /* app.use(
   cors({ origin: ["http://localhost:3000/", "https://comida-ja.onrender.com"] })
 ); */
-app.use(cors({ origin: "*" }));
 app.use("/api/names", nameRoutes);
 
 /* //Para ver si funciona en el navegador:
