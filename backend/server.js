@@ -8,12 +8,6 @@ const nameRoutes = require("./routes/nameRoute");
 const app = express();
 
 //Middleware
-//Ejemplo:
-/* const logger = (req, res, next) => {
-    console.log("Middleware ran");
-    console.log(req.method);
-    next();
-}; */
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
@@ -21,11 +15,6 @@ app.use(
   cors({ origin: ["http://localhost:3000/", "https://comida-ja.onrender.com"] })
 );
 app.use("/api/names", nameRoutes);
-
-/* //Para ver si funciona en el navegador:
-app.get("/", (req, res) => {
-  res.send("Home page");
-}); */
 
 const PORT = process.env.PORT || 5001;
 
