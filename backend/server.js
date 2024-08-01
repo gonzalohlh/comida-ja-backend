@@ -40,3 +40,7 @@ mongoose
 };
 
 startServer(); */
+
+//MONGO_URI=mongodb+srv://gonzalogaldame:Blablabla1@gonzalocluster.1zz2e8t.mongodb.net/Comida-JA?retryWrites=true&w=majority
+
+//MONGO_URI=mongodb+srv://gonza1234:comidaja@comida-ja.a2e8hpt.mongodb.net/Comida-JA?retryWrites=true&w=majority&appName=Comida-JA
